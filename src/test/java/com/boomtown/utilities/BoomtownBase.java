@@ -7,11 +7,8 @@ public abstract class BoomtownBase {
 
     @BeforeAll
     public static void setup(){
-
-
-        RestAssured.authentication = RestAssured
-                .preemptive().basic("X-Boomtown-Integration", "TBYS9Q" );
-
+/**in order to avoid DRY, I store the API in this BoomtownBase class to reuse in future tasks
+ * */
         baseURI = "https://api.preprod.goboomtown.com/sdk/v1/kb/search";
 
     }
